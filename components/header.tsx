@@ -1,13 +1,10 @@
-import { Fragment } from 'react'
-import { Popover, Transition } from '@headlessui/react'
-import {
-  MenuIcon,
-  XIcon,
-} from '@heroicons/react/outline'
-import Image from 'next/image'
+import { Fragment } from 'react';
+import { Popover, Transition } from '@headlessui/react';
+import { MenuIcon, XIcon } from '@heroicons/react/outline';
+import Image from 'next/image';
 
 function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
+  return classes.filter(Boolean).join(' ');
 }
 
 export default function Header() {
@@ -46,7 +43,10 @@ export default function Header() {
           </div>
 
           <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-            <a href="#" className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">
+            <a
+              href="#"
+              className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900"
+            >
               Sign in
             </a>
             <a
@@ -68,7 +68,10 @@ export default function Header() {
         leaveFrom="opacity-100 scale-100"
         leaveTo="opacity-0 scale-95"
       >
-        <Popover.Panel focus className="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
+        <Popover.Panel
+          focus
+          className="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
+        >
           <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
             <div className="pt-5 pb-6 px-5">
               <div className="flex items-center justify-between">
@@ -109,5 +112,5 @@ export default function Header() {
         </Popover.Panel>
       </Transition>
     </Popover>
-  )
+  );
 }
