@@ -15,7 +15,7 @@ const Home: NextPage = () => {
         </Head>
 
         <main className={styles.main}>
-          <div className="flex flex-col items-center mb-12">
+          <div className="flex flex-col items-center mb-12 max-w-lg">
             <h1 className={styles.title}>
               <span className={styles.underlineText}>Unclutter</span> your inbox
             </h1>
