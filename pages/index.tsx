@@ -15,14 +15,21 @@ const Home: NextPage = () => {
         </Head>
 
         <main className={styles.main}>
-          <h1 className={styles.title}>
-            Welcome to <a href="https://nextjs.org">Next.js!</a>
-          </h1>
+          <div className="flex flex-col items-center mb-12">
+            <h1 className={styles.title}>Unclutter your inbox</h1>
 
-          <p className={styles.description}>
-            Get started by editing{' '}
-            <code className={styles.code}>pages/index.tsx</code>
-          </p>
+            <p className={styles.description}>
+              Save time by scheduling your newsletters to be received once per
+              week.
+            </p>
+
+            <a
+              href="#"
+              className="whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-yellow-600 hover:bg-yellow-700"
+            >
+              Register now
+            </a>
+          </div>
 
           <div className={styles.grid}>
             <a href="https://nextjs.org/docs" className={styles.card}>
@@ -63,7 +70,12 @@ const Home: NextPage = () => {
           >
             Powered by{' '}
             <span className={styles.logo}>
-              <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
+              <Image
+                src="/vercel.svg"
+                alt="Vercel Logo"
+                width={72}
+                height={16}
+              />
             </span>
           </a>
         </footer>
