@@ -19,13 +19,13 @@ const features = [
   {
     name: 'Original Design',
     description:
-      'Receive emails with the same design they had on the original newsletters.',
+      'Read the bundled up messages with the same design they had on the original newsletters.',
     icon: FingerPrintIcon,
   },
   {
     name: 'Once per Week',
     description:
-      'The scheduled emails will be sent just once so that you can focus on what is important.',
+      'Check your inbox only once, so that you can focus on more important tasks during the week.',
     icon: CalendarIcon,
   },
 ]
