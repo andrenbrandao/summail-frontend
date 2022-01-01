@@ -7,7 +7,8 @@
     "start": "next start",
     "lint": "next lint",
     "prepare": "husky install",
-    "pre-commit-lint": "yarn lint-staged"
+    "typecheck": "yarn tsc",
+    "pre-commit-lint": "yarn typecheck && yarn lint-staged"
   },
   "dependencies": {
     "@headlessui/react": "^1.4.2",
