@@ -3,6 +3,32 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Layout from '../components/layout'
+import {
+  FingerPrintIcon,
+  CalendarIcon,
+  LightBulbIcon,
+} from '@heroicons/react/outline'
+
+const features = [
+  {
+    name: 'Simple to Use',
+    description:
+      'Just add a suffix when signing up for newsletters. For example: johndoe+newsletter@gmail.com',
+    icon: LightBulbIcon,
+  },
+  {
+    name: 'Original Design',
+    description:
+      'Receive emails with the same design they had on the original newsletters.',
+    icon: FingerPrintIcon,
+  },
+  {
+    name: 'Once per Week',
+    description:
+      'The scheduled emails will be sent just once so that you can focus on what is important.',
+    icon: CalendarIcon,
+  },
+]
 
 const Home: NextPage = () => {
   return (
@@ -33,34 +59,25 @@ const Home: NextPage = () => {
             </a>
           </div>
 
-          <div className={styles.grid}>
-            <a href="https://nextjs.org/docs" className={styles.card}>
-              <h2>Documentation &rarr;</h2>
-              <p>Find in-depth information about Next.js features and API.</p>
-            </a>
-
-            <a href="https://nextjs.org/learn" className={styles.card}>
-              <h2>Learn &rarr;</h2>
-              <p>Learn about Next.js in an interactive course with quizzes!</p>
-            </a>
-
-            <a
-              href="https://github.com/vercel/next.js/tree/master/examples"
-              className={styles.card}
-            >
-              <h2>Examples &rarr;</h2>
-              <p>Discover and deploy boilerplate example Next.js projects.</p>
-            </a>
-
-            <a
-              href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-              className={styles.card}
-            >
-              <h2>Deploy &rarr;</h2>
-              <p>
-                Instantly deploy your Next.js site to a public URL with Vercel.
-              </p>
-            </a>
+          <div className="mt-12 max-w-5xl">
+            <dl className="space-y-10 md:space-y-0 md:grid md:grid-cols-3 md:gap-x-8 md:gap-y-10">
+              {features.map((feature) => (
+                <div
+                  key={feature.name}
+                  className="relative text-center items-center flex flex-col"
+                >
+                  <div className="flex items-center justify-center h-12 w-12 rounded-md bg-yellow-600 text-white">
+                    <feature.icon className="h-6 w-6" aria-hidden="true" />
+                  </div>
+                  <dt className="mt-4 text-xl leading-6 font-semibold text-gray-900">
+                    {feature.name}
+                  </dt>
+                  <dd className="mt-4 text-base font-light text-gray-500">
+                    {feature.description}
+                  </dd>
+                </div>
+              ))}
+            </dl>
           </div>
         </main>
 
