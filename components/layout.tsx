@@ -5,7 +5,8 @@ const Layout: React.FC = ({ children }) => {
     <>
       <Header />
       <main>{children}</main>
-    </>)
+    </>
+  )
 }
 
-export default Layout;
+export default Layout

@@ -56,7 +56,7 @@
   line-height: 1.5;
   font-size: 1.25rem;
   font-weight: 300;
-  @apply text-gray-600
+  @apply text-gray-600;
 }
 
 .code {
