@@ -43,7 +43,9 @@ const Home: NextPage = () => {
 
         <main className={styles.main}>
           <div className="flex flex-col items-center mb-12 max-w-lg">
-            <h1 className={styles.title}>Unclutter your inbox</h1>
+            <h1 className={styles.title}>
+              <span className={styles.underlineText}>Unclutter</span> your inbox
+            </h1>
 
             <p className={styles.description}>
               Save time by scheduling your newsletters to be received once per
