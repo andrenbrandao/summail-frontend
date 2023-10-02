@@ -8,7 +8,7 @@ import { toast } from 'react-toastify'
 
 async function handleCredentialResponse(response: CredentialResponse) {
   try {
-    await axios.post('http://localhost:400/local/login', response, {
+    await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/login`, response, {
       timeout: 5000,
       withCredentials: true,
     })
