@@ -6,7 +6,7 @@ import {
   FingerPrintIcon,
   CalendarIcon,
   LightBulbIcon,
-} from '@heroicons/react/outline'
+} from '@heroicons/react/24/outline'
 import GoogleLoginButton from '../components/google-login-button'
 
 const features = [

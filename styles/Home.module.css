@@ -29,13 +29,13 @@
 }
 
 .underlineText {
-  padding: 0 .2em;
-  box-shadow: inset 0 -.2em rgba(37, 99, 235, var(--tw-text-opacity));
+  padding: 0 0.2em;
+  box-shadow: inset 0 -0.2em rgba(37, 99, 235, var(--tw-text-opacity));
   transition: box-shadow 300ms;
 }
 
 .underlineText:hover {
-  box-shadow: inset 0 -.1em rgba(37, 99, 235, var(--tw-text-opacity));
+  box-shadow: inset 0 -0.1em rgba(37, 99, 235, var(--tw-text-opacity));
 }
 
 .title a {
