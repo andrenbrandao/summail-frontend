@@ -2,11 +2,15 @@ import type { NextPage } from 'next'
 import styles from '../styles/Home.module.css'
 import Head from 'next/head'
 import Image from 'next/image'
-import { UserCircleIcon } from '@heroicons/react/24/outline'
+import {
+  UserCircleIcon,
+  ArrowLeftOnRectangleIcon,
+} from '@heroicons/react/24/outline'
+import { Sidebar } from 'flowbite-react'
 
 const Dashboard: NextPage = () => {
   return (
-    <div className="bg-gray-100">
+    <div className="bg-gray-50">
       <Head>
         <title>Dashboard</title>
         <meta name="description" content="Summail Dashboard" />
@@ -26,19 +30,19 @@ const Dashboard: NextPage = () => {
 
       {/* Main */}
       <div className="min-h-screen">
-        <div className="flex sm:flex-row">
-          <aside className="flex flex-col min-h-screen items-center bg-white text-gray-700 font-medium p-6 w-80">
-            <a
-              href="#"
-              className="flex w-full items-center gap-2 p-2 hover:bg-gray-50 rounded-lg"
-            >
-              <UserCircleIcon
-                aria-hidden="true"
-                className="w-7 h-7 text-gray-400"
-              />
-              <span>General</span>
-            </a>
-          </aside>
+        <div className="flex">
+          <Sidebar aria-label="Default sidebar example">
+            <Sidebar.Items>
+              <Sidebar.ItemGroup>
+                <Sidebar.Item href="#" icon={UserCircleIcon} active>
+                  <p>General</p>
+                </Sidebar.Item>
+                <Sidebar.Item href="#" icon={ArrowLeftOnRectangleIcon}>
+                  <p>Log out</p>
+                </Sidebar.Item>
+              </Sidebar.ItemGroup>
+            </Sidebar.Items>
+          </Sidebar>
           <main className={styles.container}></main>
         </div>
       </div>

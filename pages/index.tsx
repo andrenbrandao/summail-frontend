@@ -40,7 +40,6 @@ const Home: NextPage = () => {
           <link rel="icon" href="/favicon.ico" />
           <script src="https://accounts.google.com/gsi/client" async></script>
         </Head>
-
         <main className={styles.main}>
           <div className="flex flex-col items-center mb-12 max-w-lg">
             <h1 className={styles.title}>
@@ -76,7 +75,6 @@ const Home: NextPage = () => {
             </dl>
           </div>
         </main>
-
         <footer className={styles.footer}>
           <p className="text-gray-500">
             © {new Date().getFullYear()} Summail. All rights reserved.
