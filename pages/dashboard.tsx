@@ -11,7 +11,7 @@ import { useBreakpoint } from '../hooks/use-breakpoint'
 import axios from 'axios'
 
 const Dashboard: NextPage = () => {
-  const { isAboveSm, isBelowSm, sm } = useBreakpoint('sm')
+  const { isBelowSm } = useBreakpoint('sm')
 
   const googleLogin = useGoogleLogin({
     flow: 'auth-code',
