@@ -7,9 +7,12 @@ import {
 } from '@heroicons/react/24/outline'
 import { Sidebar, Card, Button } from 'flowbite-react'
 import { useGoogleLogin } from '@react-oauth/google'
+import { useBreakpoint } from '../hooks/use-breakpoint'
 import axios from 'axios'
 
 const Dashboard: NextPage = () => {
+  const { isAboveSm, isBelowSm, sm } = useBreakpoint('sm')
+
   const googleLogin = useGoogleLogin({
     flow: 'auth-code',
     overrideScope: true,
@@ -48,7 +51,10 @@ const Dashboard: NextPage = () => {
       {/* Main */}
       <div className="min-h-screen">
         <div className="flex">
-          <Sidebar aria-label="Default sidebar example">
+          <Sidebar
+            aria-label="Default sidebar example"
+            {...(isBelowSm && { collapsed: true })}
+          >
             <Sidebar.Items>
               <Sidebar.ItemGroup>
                 <Sidebar.Item href="#" icon={UserCircleIcon} active>
