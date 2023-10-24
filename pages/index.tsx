@@ -8,6 +8,7 @@ import {
   LightBulbIcon,
 } from '@heroicons/react/24/outline'
 import GoogleLoginButton from '../components/google-login-button'
+import { useRouter } from 'next/router'
 
 const features = [
   {
@@ -31,6 +32,12 @@ const features = [
 ]
 
 const Home: NextPage = () => {
+  const router = useRouter()
+
+  function handleRedirect() {
+    router.push('/dashboard')
+  }
+
   return (
     <Layout>
       <div className={styles.container}>
@@ -51,7 +58,11 @@ const Home: NextPage = () => {
               week.
             </p>
 
-            <GoogleLoginButton text="continue_with" theme="filled_blue" />
+            <GoogleLoginButton
+              text="continue_with"
+              theme="filled_blue"
+              onSuccessRedirect={handleRedirect}
+            />
           </div>
 
           <div className="mt-12 max-w-5xl">
