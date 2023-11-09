@@ -1,4 +1,5 @@
 import type { NextPage } from 'next'
+import Link from 'next/link'
 import Head from 'next/head'
 import Image from 'next/image'
 import {
@@ -39,13 +40,15 @@ const Dashboard: NextPage = () => {
 
       {/* Dashboard Header */}
       <div className="flex items-center px-8 justify-start py-3 border-b border-gray-200 bg-white">
-        <Image
-          priority
-          src="/logo-icon.svg"
-          width={50}
-          height={50}
-          alt="Summail Logo"
-        />
+        <Link href={'/'}>
+          <Image
+            priority
+            src="/logo-icon.svg"
+            width={50}
+            height={50}
+            alt="Summail Logo"
+          />
+        </Link>
       </div>
 
       {/* Main */}

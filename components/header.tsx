@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import GoogleLoginButton from './google-login-button'
 import { useRouter } from 'next/router'
 
@@ -13,7 +14,7 @@ export default function Header() {
     <div className="max-w-7xl mx-auto px-4 sm:px-6">
       <div className="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
         <div className="flex justify-start lg:w-0 lg:flex-1">
-          <a href="#">
+          <Link href={'/'}>
             <span className="sr-only">Workflow</span>
             <div className="h-8 w-auto sm:h-10 hidden md:flex">
               <Image
@@ -33,7 +34,7 @@ export default function Header() {
                 alt="Summail Logo"
               />
             </div>
-          </a>
+          </Link>
         </div>
         <div className="md:flex items-center justify-end md:flex-1 lg:w-0">
           <GoogleLoginButton onSuccessRedirect={handleRedirect} />
