@@ -1,7 +1,14 @@
 import Image from 'next/image'
 import GoogleLoginButton from './google-login-button'
+import { useRouter } from 'next/router'
 
 export default function Header() {
+  const router = useRouter()
+
+  function handleRedirect() {
+    router.push('/dashboard')
+  }
+
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6">
       <div className="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
@@ -29,7 +36,7 @@ export default function Header() {
           </a>
         </div>
         <div className="md:flex items-center justify-end md:flex-1 lg:w-0">
-          <GoogleLoginButton />
+          <GoogleLoginButton onSuccessRedirect={handleRedirect} />
         </div>
       </div>
     </div>
