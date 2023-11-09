@@ -17,6 +17,7 @@
     "axios": "^1.5.1",
     "flowbite": "^1.8.1",
     "flowbite-react": "^0.6.4",
+    "jsonwebtoken": "^9.0.2",
     "next": "^13.5.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -26,6 +27,7 @@
   "devDependencies": {
     "@commitlint/cli": "^16.0.1",
     "@commitlint/config-conventional": "^16.0.0",
+    "@types/jsonwebtoken": "^9.0.5",
     "@types/node": "16.11.7",
     "@types/react": "17.0.34",
     "autoprefixer": "^10.4.16",
