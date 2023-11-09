@@ -11,7 +11,7 @@ export function middleware(request: NextRequest) {
 
   const token = jwt.decode(authCookie.value) as JwtPayload
 
-  if (token.exp && Date.now() < token.exp) {
+  if (token.exp && Date.now() / 1000 < token.exp) {
     return NextResponse.next()
   }
 
